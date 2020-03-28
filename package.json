@@ -1,0 +1,25 @@
+{
+  "name": "myrecipe",
+  "version": "1.0.0",
+  "description": "myrecipe project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateoRc/myRecipe.git"
+  },
+  "author": "Mateo Mahmutović",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateoRc/myRecipe/issues"
+  },
+  "homepage": "https://github.com/mateoRc/myRecipe#readme",
+  "devDependencies": {
+    "webpack": "^4.42.1"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
