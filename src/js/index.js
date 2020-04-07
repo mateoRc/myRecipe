@@ -24,8 +24,7 @@ const state = {};
 const controlSearch = async () => {
     
     // 1) get query from view
-    // const query = searchView.getInput();
-    const query = 'pizza';
+    const query = searchView.getInput();
     // console.log(query);
     
     if (query) {
@@ -56,12 +55,6 @@ elements.searchForm.addEventListener('submit', e => {
     controlSearch();
 });
 
-// TESTING
-window.addEventListener('load', e => {
-    e.preventDefault(); // dont refresh page
-    controlSearch();
-});
-
 elements.searchResPages.addEventListener('click', e =>{
     const btn = e.target.closest('.btn-inline');
     //console.log(btn);
@@ -86,14 +79,12 @@ const controlRecipe = async () => {
 
         // Create a new recipe object
         state.recipe = new Recipe(id);
-        
-        //TESTING
-        window.r = state.recipe;
-        
+      
         try {
-            // Get recipe data
+            // Get recipe data and parse ingredients
             await state.recipe.getRecipe();
-        
+            state.recipe.parseIngredients();
+
         // calculate servings and time
         state.recipe.calcTime();
         state.recipe.calcServings();
