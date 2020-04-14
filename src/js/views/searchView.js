@@ -1,5 +1,6 @@
 import { elements } from './base';
 
+
 export const getInput = () => elements.searchInput.value;
 
 export const clearInput = () => {
@@ -17,7 +18,7 @@ export const highlightSelected = id => {
         el.classList.remove('results__link--active');
     });
 
-    document.querySelector(`a[href="#${id}"]`).classList.add('results__link--active');
+    document.querySelector(`.results__link[href="#${id}"]`).classList.add('results__link--active');
 };
 /*
 // 'Pasta with tomato and spinach'
@@ -28,7 +29,7 @@ acc: 15 / acc + cur.length = 18 / newTitle = ['Pasta', 'with', 'tomato'] < with 
 acc: 18 / acc + cur.length = 18 / newTitle = ['Pasta', 'with', 'tomato', with]
 ....
 */
-const limitRecipeTitle = (title, limit = 17) => {
+export const limitRecipeTitle = (title, limit = 17) => {
     const newTitle = [];
     if (title.length > limit) {
         title.split(' ').reduce((acc, cur) => {
