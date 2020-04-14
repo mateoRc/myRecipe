@@ -440,6 +440,15 @@ body {
   padding: 3rem 4rem;
   display: flex;
   flex-direction: column; }
+::-webkit-scrollbar {
+    display: none;
+}
+::-moz-scrollbar {
+    display: none;
+}
+::-o-scrollbar {
+    display: none;
+}
   .shopping__list {
     list-style: none;
     max-height: 77rem;
